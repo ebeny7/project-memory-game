@@ -10,6 +10,9 @@
  *   - add each card's HTML to the page
  */
 
+var symbol = ["fa fa-diamond", "fa fa-paper-plane-o", "fa fa-bolt", "fa fa-anchor0",
+ "fa fa-cube", "fa fa-leaf", "fa fa-bicycle", "fa fa-bomb"]
+
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
@@ -25,6 +28,28 @@ function shuffle(array) {
     return array;
 }
 
+function (shuffle(symbol));
+//loop through each card and create its own html
+$(".card").addEventListener("click", function () {
+    function displayCard {
+        var open = $(".card").innerHTML = "";
+    }
+    function openCards {
+        var openList = [];
+    }
+        function listCards {
+            openList.addClass(open);
+            while openList.length > 1 {
+            if (open in openList) {
+                //lock cards in open postion
+            }
+            if (open not in openList) {
+                //remove card
+            }
+           //increment move counter
+           //display message if all cards match
+        }
+})
 
 /*
  * set up the event listener for a card. If a card is clicked:
