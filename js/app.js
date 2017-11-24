@@ -28,24 +28,28 @@ function shuffle(array) {
     return array;
 }
 
-function (shuffle(symbol));
+shuffle(symbol);
 //loop through each card and create its own html
+//add each cards html to the page
 $(".card").addEventListener("click", function () {
-    function displayCard {
-        var open = $(".card").innerHTML = "";
+    function displayCard () {
+        var open = $(".card").innerHTML = "";//function to display card's symbol
     }
-    function openCards {
-        var openList = [];
-    }
-        function listCards {
-            openList.addClass(open);
+        function OpenCards () {
+            var openList = [];
+            openList.addClass(open);//adding card to a list of open cards
             while openList.length > 1 {
-            if (open in openList) {
-                //lock cards in open postion
+            function lockCards () {
+                if (open in openList) { //checking if two cards match
+                    }//lock cards in open position
             }
-            if (open not in openList) {
-                //remove card
+            function removeCard () {
+                if (!(open in openList)) {
+                    var removeList = openList.remove(open); //remove card from list of open cards if they do not match
+                    removeList.hide();
+                }
             }
+            
            //increment move counter
            //display message if all cards match
         }
