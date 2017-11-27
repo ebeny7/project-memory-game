@@ -10,8 +10,17 @@
  *   - add each card's HTML to the page
  */
 
-var symbol = ["fa fa-diamond", "fa fa-paper-plane-o", "fa fa-bolt", "fa fa-anchor0",
- "fa fa-cube", "fa fa-leaf", "fa fa-bicycle", "fa fa-bomb"]
+var symbols = [
+    "fa fa-diamond",
+    "fa fa-diamond", 
+    "fa fa-paper-plane-o",
+    "fa fa-bolt", 
+    "fa fa-anchor0", 
+    "fa fa-cube", 
+    "fa fa-leaf", 
+    "fa fa-bicycle",
+    "fa fa-bomb" 
+];
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
@@ -28,32 +37,42 @@ function shuffle(array) {
     return array;
 }
 
-shuffle(symbol);
-//loop through each card and create its own html
-//add each cards html to the page
-$(".card").addEventListener("click", function () {
-    function displayCard () {
-        var open = $(".card").innerHTML = "";//function to display card's symbol
+function addCardsToDeck() {
+    shuffle(symbols);
+    symbols.forEach(function(symbol) {
+        var cardElem = '<li class="card"><i class="' + symbol + '"></i></li>';
+        $('.deck').append(cardElem);
     }
-        function OpenCards () {
-            var openList = [];
-            openList.addClass(open);//adding card to a list of open cards
-            while openList.length > 1 {
-            function lockCards () {
-                if (open in openList) { //checking if two cards match
-                    }//lock cards in open position
+
+$(".deck").addEventListener("click", function () {
+    function displayCard () {
+        var open = //display card
+    }
+
+    function OpenCards () {
+        var openList = [];
+        openList.addClass(open);//adding card to a list of open cards
+    }
+
+    function lockCards () {
+        while openList.length > 1 {
+            if (open in openList) { //checking if two cards match
+            //lock cards in open position
             }
-            function removeCard () {
-                if (!(open in openList)) {
-                    var removeList = openList.remove(open); //remove card from list of open cards if they do not match
-                    removeList.hide();
-                }
-            }
-            
+        }
+    }
+
+    function removeCard () {
+        if (!(open in openList)) {
+            var removeList = openList.remove(open); //remove card from list of open cards if they do not match
+            removeList.hide();
+        }
+    }
+})
+
            //increment move counter
            //display message if all cards match
-        }
-})
+
 
 /*
  * set up the event listener for a card. If a card is clicked:
